@@ -273,10 +273,10 @@ async function fetchTides(location: Coordinates, hours: string[]) {
       height: heightByHour.get(toUtcHourIso(time)) ?? null
     }));
 
-    const events =
+    const events: TideEvent[] =
       extremesData.data?.map((item) => ({
         time: item.time,
-        type: item.type === "high" ? "HIGH" : "LOW",
+        type: item.type === "high" ? ("HIGH" as const) : ("LOW" as const),
         height: typeof item.height === "number" ? Number(item.height.toFixed(2)) : null
       })) ?? [];
 
