@@ -1,0 +1,284 @@
+:root {
+  --bg: #f3efe4;
+  --panel: rgba(255, 251, 244, 0.88);
+  --panel-strong: rgba(255, 248, 235, 0.96);
+  --text: #193028;
+  --muted: #5f7168;
+  --line: rgba(25, 48, 40, 0.12);
+  --accent: #1d7c6d;
+  --accent-soft: #d8efe7;
+  --warn: #b95835;
+  --danger: #8f2f2a;
+  --shadow: 0 18px 45px rgba(31, 52, 44, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(29, 124, 109, 0.18), transparent 32%),
+    linear-gradient(180deg, #f5f1e7 0%, #eef3ed 100%);
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.shell {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 20px 16px 64px;
+}
+
+.hero {
+  padding: 20px 0 14px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(29, 124, 109, 0.12);
+  color: var(--accent);
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.hero h1 {
+  margin: 14px 0 10px;
+  font-size: clamp(32px, 6vw, 58px);
+  line-height: 0.95;
+}
+
+.hero p {
+  margin: 0;
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+}
+
+.search-card,
+.panel,
+.timeline-item {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(14px);
+}
+
+.search-card {
+  padding: 18px;
+  margin-top: 18px;
+}
+
+.search-form {
+  display: grid;
+  gap: 12px;
+}
+
+.search-form label {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.search-form input {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.8);
+  padding: 14px 16px;
+  color: var(--text);
+}
+
+.search-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.search-actions button {
+  border: 0;
+  border-radius: 16px;
+  padding: 14px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.primary-btn {
+  background: var(--accent);
+  color: white;
+}
+
+.ghost-btn {
+  background: rgba(25, 48, 40, 0.08);
+  color: var(--text);
+}
+
+.status {
+  min-height: 20px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.dashboard {
+  margin-top: 18px;
+  grid-template-columns: 1fr;
+}
+
+.summary-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.panel {
+  padding: 18px;
+}
+
+.panel h2,
+.panel h3 {
+  margin: 0 0 12px;
+}
+
+.score-wrap {
+  display: grid;
+  gap: 12px;
+}
+
+.score-number {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.score-number strong {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.score-chip {
+  display: inline-flex;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.mini-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.stat-box {
+  padding: 12px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(25, 48, 40, 0.08);
+}
+
+.label {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.value {
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+.list {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  border-radius: 16px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(25, 48, 40, 0.08);
+}
+
+.timeline {
+  display: grid;
+  gap: 12px;
+}
+
+.timeline-item {
+  padding: 14px;
+}
+
+.timeline-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.timeline-head strong {
+  font-size: 16px;
+}
+
+.timeline-grid {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.danger {
+  color: var(--danger);
+}
+
+.footer-note {
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+@media (min-width: 860px) {
+  .dashboard {
+    grid-template-columns: 360px 1fr;
+    align-items: start;
+  }
+
+  .summary-grid {
+    position: sticky;
+    top: 18px;
+  }
+
+  .timeline-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
